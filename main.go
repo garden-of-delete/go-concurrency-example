@@ -41,7 +41,7 @@ func mutexSum(x []int, sum *int, mu *sync.Mutex, wg *sync.WaitGroup) {
 func atomicSum(x []int, sum *int64, wg *sync.WaitGroup) {
 
 	for _, v := range x {
-		atomic.AddInt64(sum, int64(v)) // maximum pressure on shared resource
+		atomic.AddInt64(sum, int64(v)) // maximum pressure on shared resource for demo purposes
 	}
 	wg.Done()
 }
